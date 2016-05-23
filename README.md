@@ -16,11 +16,11 @@ Well run the tool on the example project in this repo. First, clone the repo
 
 ```sh
 git clone git+ssh://github.com/j3parker/doctool
-cd doctool/example
+cd doctool
 ```
 
 ```sh
-doctool --interactive
+doctool example --interactive
 ```
 
 Your browser will open up a window to the rendered webpage.
