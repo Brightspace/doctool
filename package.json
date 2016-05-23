@@ -1,0 +1,23 @@
+{
+  "name": "doctool",
+  "version": "0.1.0",
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "repository": "https://github.com/j3parker/doctool",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-kramdown": "^0.5.1",
+    "gulp-layout": "0.0.3",
+    "gulp-mustache": "^2.2.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-server-livereload": "^1.7.4",
+    "gulp-watch": "^4.3.6",
+    "kramed": "^0.5.6",
+    "minimist": "^1.2.0"
+  }
+}

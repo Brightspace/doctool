@@ -1,0 +1,21 @@
+{
+  "name": "doctool",
+  "description": "",
+  "main": "./src/index.js",
+  "authors": [
+    "Jacob Parker <Jacob.Parker@D2L.com>"
+  ],
+  "license": "UNLICENSED",
+  "homeapge": "https://github.com/j3parker/doctool",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vui-typography": "^3.1.0",
+    "vui-link": "^2.1.0"
+  }
+}
