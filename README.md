@@ -7,7 +7,7 @@ Tool for editing Valence UI-themed sites generated from Markdown
 You'll probably want to install this globally with `-g`. Run this:
 
 ```sh
-npm install -g https://github.com/j3parker/doctool
+npm install -g git+ssh://github.com/j3parker/doctool
 ```
 
 ## Running a build server
@@ -15,7 +15,7 @@ npm install -g https://github.com/j3parker/doctool
 Well run the tool on the example project in this repo. First, clone the repo
 
 ```sh
-git clone git://github.com/j3parker/doctool.git
+git clone git://github.com/j3parker/doctool
 cd doctool/example
 ```
 
@@ -39,13 +39,13 @@ For maximum effect, try using [Visual Studio Code](https://code.visualstudio.com
 Just remove the `--interactive` flag
 
 ```sh
-./src/cli.js example
+doctool
 ```
 
 ## CLI options
 
 ```
-Usage: /Users/jparker/src/d2l-doc/src/cli.js [inputDir] [outputDir] OPTIONS
+Usage: doctool [inputDir] [outputDir] OPTIONS
 
 Arguments       Default    Description
 inputDir        .          input files directory
@@ -64,7 +64,7 @@ Options         Default    Description
 Clone this repository,
 
 ```sh
-git clone git://github.com/j3parker/doctool.git
+git clone git://github.com/j3parker/doctool
 cd doctool
 ```
 
