@@ -15,7 +15,7 @@ npm install -g git+ssh://github.com/j3parker/doctool
 Well run the tool on the example project in this repo. First, clone the repo
 
 ```sh
-git clone git://github.com/j3parker/doctool
+git clone git+ssh://github.com/j3parker/doctool
 cd doctool/example
 ```
 
@@ -64,7 +64,7 @@ Options         Default    Description
 Clone this repository,
 
 ```sh
-git clone git://github.com/j3parker/doctool
+git clone git+ssh://github.com/j3parker/doctool
 cd doctool
 ```
 
