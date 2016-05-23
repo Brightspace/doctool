@@ -5,6 +5,9 @@ const run = require('./index');
 const Table = require('cli-table');
 
 const defaultOpts = [{
+    name: "interactive",
+    description: "runs a web server and automatically re-renders and reloads browsers"
+}, {
     name: "wport",
     value: 8080,
     description: "web server port"
