@@ -44,7 +44,7 @@ Just remove the `--interactive` flag
 
 ## CLI options
 
-```sh
+```
 Usage: /Users/jparker/src/d2l-doc/src/cli.js [inputDir] [outputDir] OPTIONS
 
 Arguments       Default    Description
