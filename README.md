@@ -47,13 +47,13 @@ Just remove the `--interactive` flag
 ## CLI options
 
 ```sh
-Usage: ./src/index.js DIR
+Usage: ./src/index.js inputDir [ OPTIONS ]
 Options:
 arg             default    description
 --interactive   -          runs a web server and automatically re-renders an…
 --wport         8080       web server port
 --rport         8081       web-socket page refresh port
---out           .dist      output directory (relative to DIR if applicable)
+--out           .dist      output directory (relative to inputDir if applicable)
 --verbose       -          verbose output
 --notify        -          send notifications of changes to the OS
 ```

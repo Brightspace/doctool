@@ -18,7 +18,7 @@ const defaultOpts = [{
 }, {
     name: "out",
     value: ".dist",
-    description: "output directory (relative to DIR if applicable)"
+    description: "output directory (relative to inputDir if applicable)"
 }, {
     name: "verbose",
     description: "verbose output"
@@ -36,7 +36,7 @@ function getDefaultArgs(defaultOpts) {
 }
 
 function help() {
-    const help = 'Usage: ./src/index.js DIR\nOptions:\n';
+    const help = 'Usage: ./src/index.js inputDir [ OPTIONS ]\nOptions:\n';
     const table = new Table({
         chars: {
             'top': '' , 'top-mid': '' , 'top-left': '' , 'top-right': '',
