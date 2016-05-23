@@ -63,17 +63,17 @@ module.exports = opts => {
             .pipe(dest('Copied'));
     });
 
-    gulp.task('web', () => {
-        const files = __dirname + '/src/web/**/*';
+    gulp.task('runtime', () => {
+        const files = __dirname + '/src/runtime/**/*';
 
         gulp.src(files)
-            .pipe(watch(files, { base: __dirname + '/src/web/' }))
-            .pipe(dest('Web files'));
+            .pipe(watch(files, { base: __dirname + '/src/runtime/' }))
+            .pipe(dest('Runtime files'));
     });
 
     gulp.task('build', () => {
         gulp.start('lib');
-        gulp.start('web');
+        gulp.start('runtime');
         gulp.start('copy');
         gulp.start('markdown');
 
