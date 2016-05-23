@@ -17,7 +17,7 @@ function renderLink(href, title, text) {
 module.exports = {
     layout: opts => layout({
         engine: 'mustache',
-        layout: process.cwd() + '/src/templates/layout.mustache',
+        layout: __dirname + '/templates/layout.mustache',
     }),
     renderer: opts => {
         const renderer = new kramed.Renderer();

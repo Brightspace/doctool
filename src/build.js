@@ -77,7 +77,7 @@ module.exports = opts => {
         gulp.start('markdown');
 
         if(opts.interactive) {
-            gulp.watch('./src/templates/layout.mustache', ['markdown']);
+            gulp.watch(__dirname + '/templates/layout.mustache', ['markdown']);
         }
     });
 
