@@ -50,7 +50,7 @@ Just remove the `--interactive` flag
 Usage: ./src/index.js inputDir [ OPTIONS ]
 Options:
 arg             default    description
---interactive   -          runs a web server and automatically re-renders an…
+--interactive   -          runs a web server and automatically re-renders and reloads browsers
 --wport         8080       web server port
 --rport         8081       web-socket page refresh port
 --out           .dist      output directory (relative to inputDir if applicable)

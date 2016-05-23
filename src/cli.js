@@ -46,7 +46,7 @@ function help() {
         },
         style: { 'padding-left': 0, 'padding-right': 0 },
         head: ['arg', 'default', 'description'],
-        colWidths: [ 15, 10, 50 ]
+        colWidths: [ 15, 10, 70 ]
     });
 
     for(let i = 0; i < defaultOpts.length; i++) {
