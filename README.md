@@ -22,7 +22,7 @@ npm install
 To run the build server, using the example project,
 
 ```sh
-./src/cli.js example`
+./src/cli.js example
 ```
 
 Your browser will open up a window to the rendered webpage.
@@ -39,7 +39,7 @@ For maximum effect, try using [Visual Studio Code](https://code.visualstudio.com
 ## CLI options
 
 ```sh
-Usage: ./src/index.js DIR
+Usage: ./src/cli.js DIR
 Options:
 arg             default    description
 --wport         8080       web server port
