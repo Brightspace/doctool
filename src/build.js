@@ -1,6 +1,7 @@
 'use strict';
 const kramdown = require('gulp-kramdown');
 const identity = require('gulp-identity');
+const path = require('path');
 const vui = require('./vui');
 
 module.exports = opts => {
@@ -18,9 +19,8 @@ module.exports = opts => {
         }
     };
 
-    const dest = (action, prefix) => {
-        prefix = prefix || '';
-        let ret = gulp.dest(opts.out + prefix, { cwd: opts.in })
+    const dest = action => {
+        let ret = gulp.dest(opts.out, { cwd: opts.in })
         if(opts.notify) {
             ret.pipe(notify(action + ': <%= file.relative %>'));
         }
@@ -45,8 +45,9 @@ module.exports = opts => {
     });
 
     gulp.task('lib', () => {
-        gulp.src('bower_components/**/*')
-            .pipe(dest('Library copied', '/lib/'));
+        const dir = path.resolve(__dirname + '/../bower_components');
+        gulp.src(dir + '/**/*')
+            .pipe(gulp.dest(opts.out + '/lib/', { cwd: dir }));
     });
 
     gulp.task('copy', () => {
@@ -63,10 +64,10 @@ module.exports = opts => {
     });
 
     gulp.task('web', () => {
-        const files = './src/web/**/*';
+        const files = __dirname + '/src/web/**/*';
 
         gulp.src(files)
-            .pipe(watch(files, { base: './src/web/' }))
+            .pipe(watch(files, { base: __dirname + '/src/web/' }))
             .pipe(dest('Web files'));
     });
 
