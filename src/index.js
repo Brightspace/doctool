@@ -4,30 +4,47 @@
 const minimist = require('minimist');
 const path = require('path');
 
-const defaultArgs = {
-    wport: 8080,
-    rport: 8081,
-    out: '.dist'
-};
+const defaultOpts = [{
+    name: "wport",
+    value: 8080,
+    description: "web server port"
+}, {
+    name: "rport",
+    value: 8081,
+    description: "web-socket page refresh port",
+}, {
+    name: "out",
+    value: ".dist",
+    description: "output directory (relative to DIR if applicable"
+}];
+
+function getDefaultArgs(defaultOpts) {
+    let args = {};
+    for(let i = 0; i < defaultOpts.length; i++) {
+        args[defaultOpts[i].name] = defaultOpts[i].value;
+    }
+    return args;
+}
 
 function help() {
-    let help = 'Usage: ./src/index.js --in DIR [';
+    let help = 'Usage: ./src/index.js DIR\nOptions:\n';
 
-    for(let x in defaultArgs) {
-        help += ' --' + x + ' ' + defaultArgs[x];
+    for(let i = 0; i < defaultOpts.length; i++) {
+        help += '\t--' + defaultOpts[i].name + ' [default: ' + defaultOpts[i].value + ']\t\t' + defaultOpts[i].description + '\n';
     }
 
-    console.log(help + ' ]');
+    console.log(help);
 }
 
 function create(argv) {
-    const opts = minimist(argv, { default: defaultArgs });
+    const opts = minimist(argv, { default: getDefaultArgs(defaultOpts) });
 
-    if(!opts.in) {
+    if(opts._.length != 1) {
         return help();
     }
 
     // Normalize paths
+    opts.in = opts._[0];
     opts.in = path.resolve(opts.in);
     opts.out = opts.in + '/' + opts.out;
     delete opts['_'];

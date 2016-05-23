@@ -6,7 +6,7 @@ Tool for editing Valence UI-themed sites generated from Markdown
 
 ```sh
 npm install
-./src/index.js --in example
+./src/index.js example
 ```
 
 This will open up a browser with the live-rendered version of `example/`.

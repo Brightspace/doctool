@@ -37,6 +37,6 @@ With some *italic* and **bold** text.
 
 ### Credits
 
-Cat image copyright Alvesgaspar / [CC-BY-SA-3.0](http://creativecommons.org/licenses/by-sa/3.0/), retrieved from [Wikipedia](https://commons.wikimedia.org/wiki/File:Cat_March_2010-1.jpg)
+Cat image copyright Alvesgaspar / [CC-BY-SA-3.0](http://creativecommons.org/licenses/by-sa/3.0/), found on [Wikipedia](https://commons.wikimedia.org/wiki/File:Cat_March_2010-1.jpg)
 
 <img style="position: absolute; left: 0" src="cat.jpg"/>
