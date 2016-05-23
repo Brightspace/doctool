@@ -22,7 +22,7 @@ cd doctool
 Next, start doctool in interactive mode:
 
 ```sh
-doctool example --interactive
+doctool --interactive example
 ```
 
 Your browser will open up a window to the rendered webpage.
