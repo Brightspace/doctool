@@ -48,7 +48,7 @@ module.exports = opts => {
 
     gulp.task('lib', () => {
         gulp.src('bower_components/**/*')
-            .pipe(dest('Library copied', '/lib'));
+            .pipe(dest('Library copied', '/lib/'));
     });
 
     gulp.task('copy', () => {
