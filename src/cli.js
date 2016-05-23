@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 'use strict';
+const fs = require('fs');
 const minimist = require('minimist');
 const run = require('./index');
 const Table = require('cli-table');
@@ -96,6 +97,9 @@ function main() {
     opts.in = opts._[0];
     opts.out = opts._[1];
     delete opts['_'];
+
+    // Crash if the input directory doesn't exist
+    fs.accessSync(opts.in, fs.F_OK)
 
     run(opts);
 }
