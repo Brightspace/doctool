@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "",
   "main": "./src/index.js",
+  "bin": {
+    "doctool": "./src/cli.js"
+  },
   "scripts": {
     "postinstall": "bower install",
     "test": "echo \"Error: no test specified\" && exit 1"
