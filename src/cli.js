@@ -70,7 +70,11 @@ function main() {
         default: getDefaultArgs(defaultOpts)
     });
 
-    if(opts._.length != 1) {
+    if(opts._.length === 0) {
+        opts._ = [ '.' ];
+    }
+
+    if(opts._.length !== 1) {
         return help();
     }
 
