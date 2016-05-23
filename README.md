@@ -4,25 +4,23 @@ Tool for editing Valence UI-themed sites generated from Markdown
 
 ## Setup
 
-Clone this repository,
+You'll probably want to install this globally with `-g`. Run this:
 
 ```sh
-git clone git://github.com/Brightspace/doctool.git
-cd doctool
-```
-
-Install dependencies with `npm`,
-
-```sh
-npm install
+npm install -g https://github.com/j3parker/doctool
 ```
 
 ## Running a build server
 
-To run the build server, using the example project,
+Well run the tool on the example project in this repo. First, clone the repo
 
 ```sh
-./src/cli.js example --interactive
+git clone git://github.com/j3parker/doctool.git
+cd doctool/example
+```
+
+```sh
+doctool --interactive
 ```
 
 Your browser will open up a window to the rendered webpage.
@@ -47,7 +45,8 @@ Just remove the `--interactive` flag
 ## CLI options
 
 ```sh
-Usage: ./src/index.js inputDir [ OPTIONS ]
+Usage: doctool [ inputDir ] [ OPTIONS ]
+Arguments:
 Options:
 arg             default    description
 --interactive   -          runs a web server and automatically re-renders and reloads browsers
@@ -57,3 +56,18 @@ arg             default    description
 --verbose       -          verbose output
 --notify        -          send notifications of changes to the OS
 ```
+
+## Developing
+Clone this repository,
+
+```sh
+git clone git://github.com/j3parker/doctool.git
+cd doctool
+```
+
+Install dependencies with `npm`,
+
+```sh
+npm install
+```
+
