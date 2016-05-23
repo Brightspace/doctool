@@ -45,16 +45,19 @@ Just remove the `--interactive` flag
 ## CLI options
 
 ```sh
-Usage: doctool [ inputDir ] [ OPTIONS ]
-Arguments:
-Options:
-arg             default    description
+Usage: /Users/jparker/src/d2l-doc/src/cli.js [inputDir] [outputDir] OPTIONS
+
+Arguments       Default    Description
+inputDir        .          input files directory
+outputDir       .dist      output directory
+
+Options         Default    Description
 --interactive   -          runs a web server and automatically re-renders and reloads browsers
 --wport         8080       web server port
 --rport         8081       web-socket page refresh port
---out           .dist      output directory (relative to inputDir if applicable)
 --verbose       -          verbose output
 --notify        -          send notifications of changes to the OS
+--help          -          this screen
 ```
 
 ## Developing
