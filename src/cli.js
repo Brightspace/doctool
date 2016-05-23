@@ -16,15 +16,14 @@ const defaultOpts = [{
     value: 8081,
     description: "web-socket page refresh port",
 }, {
-    name: "out",
-    value: ".dist",
-    description: "output directory (relative to inputDir if applicable)"
-}, {
     name: "verbose",
     description: "verbose output"
 }, {
     name: "notify",
     description: "send notifications of changes to the OS"
+}, {
+    name: "help",
+    description: "this screen"
 }];
 
 function getDefaultArgs(defaultOpts) {
@@ -35,8 +34,7 @@ function getDefaultArgs(defaultOpts) {
     return args;
 }
 
-function help() {
-    const help = 'Usage: ./src/index.js inputDir [ OPTIONS ]\nOptions:\n';
+function plainTable(head) {
     const table = new Table({
         chars: {
             'top': '' , 'top-mid': '' , 'top-left': '' , 'top-right': '',
@@ -45,16 +43,27 @@ function help() {
             'right': '' , 'right-mid': '' , 'middle': ' ',
         },
         style: { 'padding-left': 0, 'padding-right': 0 },
-        head: ['arg', 'default', 'description'],
+        head: head,
         colWidths: [ 15, 10, 70 ]
     });
 
+    return table;
+}
+
+function help(progName) {
+    const help = `Usage: ${progName} [inputDir] [outputDir] OPTIONS\n\n`;
+
+    const args = plainTable(['Arguments', 'Default', 'Description']);
+    args.push(['inputDir', '.', 'input files directory'])
+    args.push(['outputDir', '.dist', 'output directory']);
+
+    const opts = plainTable(['Options', 'Default', 'Description']);
     for(let i = 0; i < defaultOpts.length; i++) {
         const opt = defaultOpts[i];
-        table.push([(opt.flag ? '-' : '--') + opt.name, opt.value || '-', opt.description]);
+        opts.push([(opt.flag ? '-' : '--') + opt.name, opt.value || '-', opt.description]);
     }
 
-    console.log(help + table);
+    console.log(help + args + '\n\n' + opts);
 }
 
 function main() {
@@ -65,6 +74,7 @@ function main() {
     }
 
     const argv = process.argv.slice(2);
+    const progName = process.argv[1];
 
     const opts = minimist(argv, {
         default: getDefaultArgs(defaultOpts)
@@ -74,11 +84,16 @@ function main() {
         opts._ = [ '.' ];
     }
 
-    if(opts._.length !== 1) {
-        return help();
+    if(opts._.length === 1) {
+        opts._.push('.dist');
+    }
+
+    if(opts._.length > 2 || opts.help || opts.h) {
+        return help(progName);
     }
 
     opts.in = opts._[0];
+    opts.out = opts._[1];
     delete opts['_'];
 
     run(opts);
