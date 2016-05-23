@@ -8,10 +8,11 @@ module.exports = opts => {
     opts.out = opts.in + '/' + opts.out;
 
     const build = (require('./build'))(opts);
+    const server = (require('./server'))(opts);
 
     if(opts.interactive) {
         build.start('watch');
-        build.start('server');
+        server.start('server');
     } else {
         throw 'not implemented: use --interactive for now';
     }

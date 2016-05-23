@@ -1,9 +1,6 @@
 'use strict';
-
 const kramdown = require('gulp-kramdown');
-const fs = require('fs');
 const notify = require('gulp-notify');
-const server = require('gulp-server-livereload');
 const vui = require('./vui');
 const watch = require('gulp-watch');
 
@@ -72,34 +69,9 @@ module.exports = opts => {
             .pipe(dest('Web files'));
     });
 
-    gulp.task('server', () => {
-        // do this sync so that the dir is garunteed to be there for the
-        // gulp.src that follows
-        try {
-            fs.mkdirSync(opts.out);
-        } catch(e) {}
-
-        gulp.src(opts.out + '/')
-            .pipe(server({
-                host: '0.0.0.0',
-                port: opts.wport,
-                livereload: {
-                    enable: true,
-                    port: opts.rport
-                },
-                directoryListing: {
-                    enable: true,
-                    path: opts.out
-                },
-                open: true,
-                log: opts.verbose ? 'debug' : null
-            }));
-    });
-
     gulp.task('layout', () => {
         gulp.watch('./src/templates/layout.mustache', ['markdown']);
     });
-
 
     gulp.task('watch', () => {
         gulp.start('layout');
