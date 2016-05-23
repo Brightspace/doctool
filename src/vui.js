@@ -6,12 +6,12 @@ const kramed = require('kramed');
 function renderHeading(text, level) {
     const h = 'h' + level;
 
-    return `<${h} class="vui-heading-${level}">${text}</${h}>`
+    return `<${h} class="vui-heading-${level}">${text.trim()}</${h}>`
 };
 
 function renderLink(href, title, text) {
     // TODO what is title?
-    return `<a href=${href} is="vui-link">${text}</a>`;
+    return `<a href=${href} is="vui-link">${text.trim()}</a>`;
 }
 
 module.exports = {
