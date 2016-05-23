@@ -19,12 +19,15 @@ git clone git+ssh://github.com/j3parker/doctool
 cd doctool
 ```
 
+Next, start doctool in interactive mode:
+
 ```sh
 doctool example --interactive
 ```
 
 Your browser will open up a window to the rendered webpage.
-You can edit files and the pages will render and reload as you save.
+You can edit files in your favourite editor and the pages will render and reload when you save.
+
 For maximum effect, try using [Visual Studio Code](https://code.visualstudio.com/) with the following user settings:
 
 ```json
