@@ -77,6 +77,7 @@ function main() {
     const progName = process.argv[1];
 
     const opts = minimist(argv, {
+        boolean: [ 'interactive', 'verbose', 'notify', 'help' ],
         default: getDefaultArgs(defaultOpts)
     });
 
