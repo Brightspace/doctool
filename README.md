@@ -22,7 +22,7 @@ npm install
 To run the build server, using the example project,
 
 ```sh
-./src/cli.js --interactive example
+./src/cli.js example --interactive
 ```
 
 Your browser will open up a window to the rendered webpage.

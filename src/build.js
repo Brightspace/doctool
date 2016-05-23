@@ -1,11 +1,12 @@
 'use strict';
 const kramdown = require('gulp-kramdown');
-const notify = require('gulp-notify');
+const identity = require('gulp-identity');
 const vui = require('./vui');
-const watch = require('gulp-watch');
 
 module.exports = opts => {
     const gulp = require('gulp');
+    const notify = opts.notify ? require('gulp-notify') : identity;
+    const watch = opts.interactive ? require('gulp-watch') : identity;
 
     const paths = {
         in: {
@@ -69,16 +70,15 @@ module.exports = opts => {
             .pipe(dest('Web files'));
     });
 
-    gulp.task('layout', () => {
-        gulp.watch('./src/templates/layout.mustache', ['markdown']);
-    });
-
-    gulp.task('watch', () => {
-        gulp.start('layout');
+    gulp.task('build', () => {
         gulp.start('lib');
         gulp.start('web');
         gulp.start('copy');
         gulp.start('markdown');
+
+        if(opts.interactive) {
+            gulp.watch('./src/templates/layout.mustache', ['markdown']);
+        }
     });
 
     return gulp;

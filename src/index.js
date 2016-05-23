@@ -10,10 +10,9 @@ module.exports = opts => {
     const build = (require('./build'))(opts);
     const server = (require('./server'))(opts);
 
+    build.start('build');
+
     if(opts.interactive) {
-        build.start('watch');
         server.start('server');
-    } else {
-        throw 'not implemented: use --interactive for now';
     }
 }
