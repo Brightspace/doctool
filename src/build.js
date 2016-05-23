@@ -92,7 +92,7 @@ module.exports = opts => {
                     path: opts.out
                 },
                 open: true,
-                log: opts.v ? 'debug' : null
+                log: opts.verbose ? 'debug' : null
             }));
     });
 

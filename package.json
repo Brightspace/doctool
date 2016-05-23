@@ -11,6 +11,7 @@
   "license": "UNLICENSED",
   "repository": "https://github.com/j3parker/doctool",
   "dependencies": {
+    "cli-table": "^0.3.1",
     "gulp": "^3.9.1",
     "gulp-kramdown": "^0.5.1",
     "gulp-layout": "0.0.3",
