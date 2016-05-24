@@ -5,7 +5,7 @@
   "authors": [
     "Jacob Parker <Jacob.Parker@D2L.com>"
   ],
-  "license": "UNLICENSED",
+  "license": "Apache-2.0",
   "homeapge": "https://github.com/j3parker/doctool",
   "ignore": [
     "**/.*",
