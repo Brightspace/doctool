@@ -6,7 +6,7 @@
     "Jacob Parker <Jacob.Parker@D2L.com>"
   ],
   "license": "Apache-2.0",
-  "homeapge": "https://github.com/j3parker/doctool",
+  "homeapge": "https://github.com/Brightspace/doctool",
   "ignore": [
     "**/.*",
     "node_modules",
