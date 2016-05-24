@@ -7,7 +7,7 @@ Tool for editing Valence UI-themed sites generated from Markdown
 You'll probably want to install this globally with `-g`. Run this:
 
 ```sh
-npm install -g git+ssh://github.com/Brightspace/doctool
+npm install -g https://github.com/Brightspace/doctool
 ```
 
 ## Running a build server
@@ -15,7 +15,7 @@ npm install -g git+ssh://github.com/Brightspace/doctool
 Well run the tool on the example project in this repo. First, clone the repo
 
 ```sh
-git clone git+ssh://github.com/Brightspace/doctool
+git clone https://github.com/Brightspace/doctool
 cd doctool
 ```
 
@@ -65,18 +65,16 @@ Options         Default    Description
 ```
 
 ## Developing
-Clone this repository,
 
-```sh
-git clone git+ssh://github.com/Brightspace/doctool
-cd doctool
-```
-
-Install dependencies with `npm`,
+See the section below on contributing.
+It is recommended that you first fork the repo.
+After that, clone it and enter the repositories directory on the command-line and run
 
 ```sh
 npm install
 ```
+
+to install the dependencies.
 
 To stop yourself from going insane, you'll probably want the `--no-browser` argument when using `--interactive` to avoid spamming your tab bar.
 
