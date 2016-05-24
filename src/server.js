@@ -14,7 +14,7 @@ module.exports = opts => {
 
         gulp.src(opts.out + '/')
             .pipe(server({
-                host: '0.0.0.0',
+                host: 'localhost',
                 port: opts.wport,
                 livereload: {
                     enable: true,
