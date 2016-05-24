@@ -48,7 +48,7 @@ doctool example
 ## CLI options
 
 ```
-Usage: doctool <inputDir> [ <outputDir> ] OPTIONS
+Usage: doctool <inputDir> [<outputDir>] OPTIONS
 
 Arguments       Default    Description
 inputDir        -          input files directory
