@@ -51,7 +51,7 @@ doctool example
 Usage: doctool [inputDir] [outputDir] OPTIONS
 
 Arguments       Default    Description
-inputDir        .          input files directory
+inputDir        -          input files directory
 outputDir       .dist      output directory
 
 Options         Default    Description
