@@ -24,7 +24,7 @@ module.exports = opts => {
                     enable: true,
                     path: opts.out
                 },
-                open: true,
+                open: opts['browser'],
                 log: opts.verbose ? 'debug' : null
             }));
     });

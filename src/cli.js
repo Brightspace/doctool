@@ -9,6 +9,10 @@ const defaultOpts = [{
     name: "interactive",
     description: "runs a web server and automatically re-renders and reloads browsers"
 }, {
+    name: "browser",
+    description: "open a browser",
+    value: true
+}, {
     name: "wport",
     value: 8080,
     description: "web server port"
@@ -78,7 +82,7 @@ function main() {
     const progName = process.argv[1];
 
     const opts = minimist(argv, {
-        boolean: [ 'interactive', 'verbose', 'notify', 'help' ],
+        boolean: [ 'interactive', 'verbose', 'notify', 'help', 'browser' ],
         default: getDefaultArgs(defaultOpts)
     });
 

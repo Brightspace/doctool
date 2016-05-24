@@ -56,6 +56,7 @@ outputDir       .dist      output directory
 
 Options         Default    Description
 --interactive   -          runs a web server and automatically re-renders and reloads browsers
+--browser       true       open a browser
 --wport         8080       web server port
 --rport         8081       web-socket page refresh port
 --verbose       -          verbose output
@@ -77,3 +78,8 @@ Install dependencies with `npm`,
 npm install
 ```
 
+To stop yourself from going insane, you'll probably want the `--no-browser` argument when using `--interactive` to avoid spamming your tab bar.
+
+```sh
+./src/cli.js --interactive --no-browser
+```
