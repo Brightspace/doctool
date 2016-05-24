@@ -81,5 +81,5 @@ npm install
 To stop yourself from going insane, you'll probably want the `--no-browser` argument when using `--interactive` to avoid spamming your tab bar.
 
 ```sh
-./src/cli.js --interactive --no-browser
+./src/cli.js --interactive --no-browser example
 ```
