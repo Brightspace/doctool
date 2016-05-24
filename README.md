@@ -42,7 +42,7 @@ For maximum effect, try using [Visual Studio Code](https://code.visualstudio.com
 Just remove the `--interactive` flag
 
 ```sh
-doctool
+doctool example
 ```
 
 ## CLI options
