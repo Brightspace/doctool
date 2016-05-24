@@ -59,7 +59,7 @@ function help(progName) {
     const help = `Usage: ${progName} [inputDir] [outputDir] OPTIONS\n\n`;
 
     const args = plainTable(['Arguments', 'Default', 'Description']);
-    args.push(['inputDir', '.', 'input files directory'])
+    args.push(['inputDir', '-', 'input files directory'])
     args.push(['outputDir', '.dist', 'output directory']);
 
     const opts = plainTable(['Options', 'Default', 'Description']);
@@ -87,7 +87,7 @@ function main() {
     });
 
     if(opts._.length === 0) {
-        opts._ = [ '.' ];
+        return help(progName);
     }
 
     if(opts._.length === 1) {
