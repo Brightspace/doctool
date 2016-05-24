@@ -11,11 +11,11 @@ module.exports = opts => {
 
     const paths = {
         in: {
-            all: opts.in + '/**/*',
-            md: opts.in + '/**/*.md',
+            all: path.resolve(opts.in + '/**/*'),
+            md: path.resolve(opts.in + '/**/*.md'),
         },
         out: {
-            all: opts.out + '/**/*',
+            all: path.resolve(opts.out + '/**/*'),
         }
     };
 
@@ -28,7 +28,7 @@ module.exports = opts => {
     };
 
     const base = {
-        base: opts.in + '/'
+        base: path.resolve(opts.in + '/')
     };
 
     gulp.task('markdown', () => {
@@ -46,8 +46,8 @@ module.exports = opts => {
 
     gulp.task('lib', () => {
         const dir = path.resolve(__dirname + '/../bower_components');
-        gulp.src(dir + '/**/*')
-            .pipe(gulp.dest(opts.out + '/lib/', { cwd: dir }));
+        gulp.src(path.resolve(dir + '/**/*'))
+            .pipe(gulp.dest(path.resolve(opts.out + '/lib/'), { cwd: dir }));
     });
 
     gulp.task('copy', () => {
@@ -64,10 +64,9 @@ module.exports = opts => {
     });
 
     gulp.task('runtime', () => {
-        const files = __dirname + '/src/runtime/**/*';
-
+        const files = path.resolve(__dirname + '/runtime/**/*');
         gulp.src(files)
-            .pipe(watch(files, { base: __dirname + '/src/runtime/' }))
+            .pipe(watch(files, { base: path.resolve(__dirname + '/runtime/') }))
             .pipe(dest('Runtime files'));
     });
 
@@ -78,7 +77,7 @@ module.exports = opts => {
         gulp.start('markdown');
 
         if(opts.interactive) {
-            gulp.watch(__dirname + '/templates/layout.mustache', ['markdown']);
+            gulp.watch(path.resolve(__dirname + '/templates/layout.mustache'), ['markdown']);
         }
     });
 
