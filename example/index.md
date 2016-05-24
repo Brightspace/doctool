@@ -4,7 +4,7 @@
 
 This is a static webpage generated from rendered Markdown files and with Valence UI theming.
 
-Here's a link to [another document](/foo.html).
+Here's a link to [another document](foo.html).
 
 A table:
 

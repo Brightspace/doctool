@@ -2,4 +2,4 @@
 
 Nothing to see here.
 
-Might wanna go back to [where you came from](index.html) abc
+Might wanna go back to [where you came from](.) abc

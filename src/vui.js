@@ -11,7 +11,7 @@ function renderHeading(text, level) {
 
 function renderLink(href, title, text) {
     // TODO what is title?
-    return `<a href=${href} is="vui-link">${text.trim()}</a>`;
+    return `<a href="${href}" is="vui-link">${text.trim()}</a>`;
 }
 
 module.exports = {
