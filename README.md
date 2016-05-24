@@ -52,7 +52,7 @@ Usage: doctool <inputDir> [<outputDir>] OPTIONS
 
 Arguments       Default    Description
 inputDir        -          input files directory
-outputDir       .dist      output directory
+outputDir       .dist      output directory (relative to <inputDir> if applicable)
 
 Options         Default    Description
 --interactive   -          runs a web server and automatically re-renders and reloads browsers

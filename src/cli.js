@@ -60,7 +60,7 @@ function help(progName) {
 
     const args = plainTable(['Arguments', 'Default', 'Description']);
     args.push(['inputDir', '-', 'input files directory'])
-    args.push(['outputDir', '.dist', 'output directory']);
+    args.push(['outputDir', '.dist', 'output directory (relative to <inputDir> if applicable)']);
 
     const opts = plainTable(['Options', 'Default', 'Description']);
     for(let i = 0; i < defaultOpts.length; i++) {
