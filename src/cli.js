@@ -56,7 +56,7 @@ function plainTable(head) {
 }
 
 function help(progName) {
-    const help = `Usage: ${progName} [inputDir] [outputDir] OPTIONS\n\n`;
+    const help = `Usage: ${progName} <inputDir> [ <outputDir> ] OPTIONS\n\n`;
 
     const args = plainTable(['Arguments', 'Default', 'Description']);
     args.push(['inputDir', '-', 'input files directory'])
