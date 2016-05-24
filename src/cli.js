@@ -14,11 +14,11 @@ const defaultOpts = [{
     value: true
 }, {
     name: "wport",
-    value: 8080,
+    value: 39983,
     description: "web server port"
 }, {
     name: "rport",
-    value: 8081,
+    value: 39984,
     description: "web-socket page refresh port",
 }, {
     name: "verbose",

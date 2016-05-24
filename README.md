@@ -57,8 +57,8 @@ outputDir       .dist      output directory (relative to <inputDir> if applicabl
 Options         Default    Description
 --interactive   -          runs a web server and automatically re-renders and reloads browsers
 --browser       true       open a browser
---wport         8080       web server port
---rport         8081       web-socket page refresh port
+--wport         39983      web server port
+--rport         39984      web-socket page refresh port
 --verbose       -          verbose output
 --notify        -          send notifications of changes to the OS
 --help          -          this screen
